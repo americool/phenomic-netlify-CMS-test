@@ -11,6 +11,7 @@ collections:
     label: "Post"
     folder: "content/posts"
     create: true
+    card: {type: "alltype", text: "title"}
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Cover", name: "cover", widget: "image"}
