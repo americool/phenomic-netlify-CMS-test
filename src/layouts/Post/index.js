@@ -19,7 +19,9 @@ const Post = (props) => {
         }
         </header>
       }
-    />
+    >
+      <img src={props.head.cover} />
+    </Page>
   )
 }
 

@@ -3,7 +3,7 @@ backend:
   repo: daaain/phenomic-netlify-CMS-test
   branch: master
 
-public_folder: "dist"
+public_folder: "/assets"
 media_folder: "content/assets"
 
 collections:
