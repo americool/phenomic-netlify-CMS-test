@@ -4,15 +4,13 @@ import enhanceCollection from "phenomic/lib/enhance-collection"
 import Page from "../Page"
 import PagesList from "../../components/PagesList"
 
-const numberOfLatestPosts = 6
-
-const Homepage = (props, { collection }) => {
+const Homepage = (props, { collection, metadata: { settings } }) => {
   const latestPosts = enhanceCollection(collection, {
     filter: { layout: "Post" },
     sort: "date",
     reverse: true,
   })
-  .slice(0, numberOfLatestPosts)
+  .slice(0, Number(settings.post_count))
 
   return (
     <Page { ...props }>
@@ -24,6 +22,7 @@ const Homepage = (props, { collection }) => {
 
 Homepage.contextTypes = {
   collection: PropTypes.array.isRequired,
+  metadata: PropTypes.object.isRequired,
 }
 
 export default Homepage

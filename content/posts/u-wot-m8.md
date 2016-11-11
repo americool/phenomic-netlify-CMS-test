@@ -1,5 +1,6 @@
 ---
 path: content/posts/u-wot-m8.md
+layout: Post
 title: U wot m8
 cover: /assets/6fe.jpg
 ---
