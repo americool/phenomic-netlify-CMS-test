@@ -35,7 +35,7 @@ collections:
           - {label: "Site cover image", name: "cover", widget: "image"}
 
       - name: "config"
-        label: "Config Editor"
+        label: "Config"
         file: "admin/config.yml"
         description: "Backend Editor"
         fields:
@@ -46,6 +46,13 @@ collections:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Repo", name: "repo", widget: "string"}
               - {label: "Branch", name: "branch", widget: "string"}
+          - name: Other
+            label: Config
+            widget: "object"
+            fields:
+              - {label: "Publish Mode", name: "publish_mode", widget: "string"}
+              - {label: "Public Folder", name: "public_folder", widget: "string"}
+              - {label: "Media Folder", name: "media_folder", widget: "string"}
           - name: collections
             label: Collections
             widget: "list"
