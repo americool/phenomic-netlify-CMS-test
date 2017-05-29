@@ -3,7 +3,6 @@ backend:
   repo: americool/phenomic-netlify-CMS-test
   branch: master
 
-publish_mode: editorial_workflow
 public_folder: "/assets"
 media_folder: "content/assets"
 
@@ -23,8 +22,6 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD"}
   - name: "settings"
     label: "Settings"
-    editor:
-      preview: false
     files:
       - name: "general"
         label: "General settings"
@@ -33,34 +30,3 @@ collections:
           - {label: "Main site title", name: "site_title", widget: "string"}
           - {label: "Number of frontpage posts", name: "post_count", widget: "number"}
           - {label: "Site cover image", name: "cover", widget: "image"}
-
-      - name: "config"
-        label: "Config"
-        file: "admin/config.yml"
-        description: "Backend Editor"
-        fields:
-          - name: backend
-            label: Backend
-            widget: "object"
-            fields:
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Repo", name: "repo", widget: "string"}
-              - {label: "Branch", name: "branch", widget: "string"}
-          - name: Other
-            label: Config
-            widget: "object"
-            fields:
-              - {label: "Publish Mode", name: "publish_mode", widget: "string"}
-              - {label: "Public Folder", name: "public_folder", widget: "string"}
-              - {label: "Media Folder", name: "media_folder", widget: "string"}
-          - name: collections
-            label: Collections
-            widget: "list"
-            fields:
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Label", name: "label", widget: "string"}
-              - {label: "Folder", name: "folder", widget: "string"}
-              - {label: "Create", name: "create", widget: "string"}
-              - {label: "Sort", name: "sort", widget: "string"}
-              - {label: "Slug", name: "slug", widget: "string"}
-              - {label: "Fields", name: "fields", widget: "list"}
